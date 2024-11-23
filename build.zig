@@ -150,5 +150,7 @@ pub fn build(b: *std.Build) void {
         .root_source_file = b.path("main.zig"),
     });
 
+    module.addIncludePath(b.path("src"));
+
     lib.root_module.addImport("blend2d", module);
 }
