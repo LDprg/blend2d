@@ -7,6 +7,7 @@ pub fn build(b: *std.Build) void {
 
     const lib = b.addStaticLibrary(.{
         .name = "blend2d",
+        .root_source_file = b.path("main.zig"),
         .target = target,
         .optimize = optimize,
     });
@@ -151,6 +152,4 @@ pub fn build(b: *std.Build) void {
 
     module.addIncludePath(b.path("src"));
     module.linkLibrary(asmjit_dep.artifact("asmjit"));
-
-    lib.root_module.addImport("blend2d", module);
 }
