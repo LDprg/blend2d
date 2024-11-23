@@ -1,0 +1,19 @@
+.{
+    .name = "blend2d",
+    .version = "0.0.0",
+
+    .dependencies = .{
+        .asmjit = .{
+            .url = "https://github.com/LDprg/asmjit/archive/master.tar.gz",
+            .hash = "12204e7d4f701627bbf124f5ee6a5a5107e62b6d7b603211c66bc08ca1b4c8745056",
+        },
+    },
+
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "LICENSE.md",
+        "README.md",
+    },
+}

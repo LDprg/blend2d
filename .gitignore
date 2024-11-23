@@ -1,4 +1,5 @@
 .vscode
+.zig-cache
 build
 build_*
 3rdparty
