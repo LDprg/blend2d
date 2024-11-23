@@ -145,4 +145,10 @@ pub fn build(b: *std.Build) void {
     lib.linkLibCpp();
 
     b.installArtifact(lib);
+
+    const module = b.addModule("blend2d", .{
+        .root_source_file = b.path("main.zig"),
+    });
+
+    lib.root_module.addImport("blend2d", module);
 }
